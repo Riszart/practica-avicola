@@ -26,25 +26,17 @@ import androidx.compose.ui.unit.sp
 
 @Composable
 fun PerfilScreen(
-
     onBack: () -> Unit,
-
     onLogout: () -> Unit
-
 ) {
-
     Column(
-
         modifier = Modifier
             .fillMaxSize()
             .padding(24.dp),
-
         horizontalAlignment =
             Alignment.CenterHorizontally,
-
         verticalArrangement =
             Arrangement.Top
-
     ) {
 
         // =========================
@@ -54,161 +46,125 @@ fun PerfilScreen(
         Column(
             modifier = Modifier.fillMaxWidth()
         ) {
-
             IconButton(
                 onClick = {
                     onBack()
                 }
             ) {
-
                 Icon(
                     imageVector =
                         Icons.Default.ArrowBack,
-
                     contentDescription =
                         "Regresar"
                 )
             }
         }
 
-
         Spacer(
             modifier =
                 Modifier.height(20.dp)
         )
-
 
         // =========================
         // ICONO PERFIL
         // =========================
 
         Icon(
-
             imageVector =
                 Icons.Default.Person,
-
             contentDescription =
                 "Perfil",
-
             modifier =
                 Modifier.size(80.dp)
         )
-
 
         Spacer(
             modifier =
                 Modifier.height(15.dp)
         )
-
 
         // =========================
         // NOMBRE
         // =========================
 
         Text(
-
             text =
                 "Cliente",
-
             fontSize =
                 22.sp,
-
             fontWeight =
                 FontWeight.Bold
         )
-
 
         Spacer(
             modifier =
                 Modifier.height(5.dp)
         )
 
-
         Text(
             text =
                 "cliente@avicola.com",
-
             fontSize =
                 14.sp
         )
-
 
         Spacer(
             modifier =
                 Modifier.height(40.dp)
         )
 
-
         // =========================
         // INFORMACIÓN
         // =========================
 
         Button(
-
             onClick = {
                 // Próximamente
             },
-
             modifier =
                 Modifier.fillMaxWidth()
-
         ) {
-
             Icon(
                 imageVector =
                     Icons.Default.Person,
-
                 contentDescription =
                     "Información"
             )
-
             Spacer(
                 modifier =
                     Modifier.width(8.dp)
             )
-
             Text(
                 text =
                     "Mi información"
             )
         }
-
         Spacer(
             modifier =
                 Modifier.height(15.dp)
         )
-
 
         // =========================
         // CERRAR SESIÓN
         // =========================
 
         Button(
-
             onClick = {
-
                 onLogout()
             },
-
             modifier =
                 Modifier.fillMaxWidth()
-
         ) {
-
             Icon(
-
                 imageVector =
                     Icons.Default.Logout,
-
                 contentDescription =
                     "Cerrar sesión"
             )
-
             Spacer(
                 modifier =
                     Modifier.width(8.dp)
             )
-
             Text(
                 text =
                     "Cerrar sesión"

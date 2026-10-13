@@ -26,41 +26,30 @@ import androidx.compose.ui.unit.sp
 
 @Composable
 fun ClienteCard() {
-
     Card(
-
         modifier =
             Modifier.fillMaxWidth(),
-
         shape =
             RoundedCornerShape(14.dp),
-
         colors =
             CardDefaults.cardColors(
                 containerColor = Color.White
             ),
-
         elevation =
             CardDefaults.cardElevation(
                 defaultElevation = 2.dp
             )
-
     ) {
-
         Row(
-
             modifier =
                 Modifier
                     .fillMaxWidth()
                     .padding(14.dp),
-
             verticalAlignment =
                 Alignment.CenterVertically
 
         ) {
-
             androidx.compose.foundation.layout.Box(
-
                 modifier =
                     Modifier
                         .size(50.dp)
@@ -70,23 +59,17 @@ fun ClienteCard() {
                         .background(
                             Color(0xFFE3F2FD)
                         ),
-
                 contentAlignment =
                     Alignment.Center
 
             ) {
-
                 Icon(
-
                     imageVector =
                         Icons.Default.Person,
-
                     contentDescription =
                         "Cliente",
-
                     tint =
                         Color(0xFF1976D2),
-
                     modifier =
                         Modifier.size(30.dp)
                 )
@@ -98,27 +81,20 @@ fun ClienteCard() {
             )
 
             Column {
-
                 Text(
-
                     text =
                         "Hola, Cliente",
-
                     fontSize =
                         16.sp,
-
                     fontWeight =
                         FontWeight.Bold
                 )
 
                 Text(
-
                     text =
                         "Bienvenido a Avícola Machelo",
-
                     fontSize =
                         12.sp,
-
                     color =
                         Color.Gray
                 )

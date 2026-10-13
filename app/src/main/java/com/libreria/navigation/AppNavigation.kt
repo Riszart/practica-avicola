@@ -12,24 +12,19 @@ import com.libreria.iu.perfil.PerfilScreen
 
 @Composable
 fun AppNavigation() {
-
     var pantalla by remember {
         mutableStateOf("login")
     }
 
     when (pantalla) {
-
         // =========================
         // LOGIN
         // =========================
         "login" -> {
-
             LoginScreen(
-
                 onLogin = {
                     pantalla = "dashboard"
                 },
-
                 onRegistro = {
                     pantalla = "registro"
                 }
@@ -40,9 +35,7 @@ fun AppNavigation() {
         // REGISTRO
         // =========================
         "registro" -> {
-
             RegistroScreen(
-
                 onLogin = {
                     pantalla = "login"
                 }
@@ -53,9 +46,7 @@ fun AppNavigation() {
         // DASHBOARD
         // =========================
         "dashboard" -> {
-
             DashboardScreen(
-
                 onPerfil = {
                     pantalla = "perfil"
                 }
@@ -66,13 +57,10 @@ fun AppNavigation() {
         // PERFIL
         // =========================
         "perfil" -> {
-
             PerfilScreen(
-
                 onBack = {
                     pantalla = "dashboard"
                 },
-
                 onLogout = {
                     pantalla = "login"
                 }

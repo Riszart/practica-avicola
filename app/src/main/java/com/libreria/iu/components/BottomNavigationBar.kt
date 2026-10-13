@@ -17,83 +17,62 @@ import androidx.compose.ui.graphics.Color
 fun BottomNavigationBar(
     onPerfil: () -> Unit
 ) {
-
     NavigationBar(
         containerColor = Color.White
     ) {
-
         // =========================
         // INICIO
         // =========================
-
         NavigationBarItem(
-
             selected = true,
-
             onClick = {
                 // Inicio
             },
-
             icon = {
-
                 Icon(
                     imageVector = Icons.Default.Home,
                     contentDescription = "Inicio"
                 )
             },
-
             label = {
                 Text("Inicio")
             }
         )
 
-
         // =========================
         // PEDIDOS
         // =========================
-
         NavigationBarItem(
-
             selected = false,
-
             onClick = {
                 // Pedidos
             },
-
             icon = {
-
                 Icon(
                     imageVector = Icons.Default.Receipt,
                     contentDescription = "Pedidos"
                 )
             },
-
             label = {
                 Text("Pedidos")
             }
         )
-
 
         // =========================
         // CHAT
         // =========================
 
         NavigationBarItem(
-
             selected = false,
-
             onClick = {
                 // Chat
             },
-
             icon = {
-
                 Icon(
                     imageVector = Icons.Default.Chat,
                     contentDescription = "Chat"
                 )
             },
-
             label = {
                 Text("Chat")
             }
@@ -103,56 +82,40 @@ fun BottomNavigationBar(
         // =========================
         // SALDO
         // =========================
-
         NavigationBarItem(
-
             selected = false,
-
             onClick = {
                 // Saldo
             },
-
             icon = {
-
                 Icon(
                     imageVector =
                         Icons.Default.AccountBalanceWallet,
-
                     contentDescription =
                         "Saldo"
                 )
             },
-
             label = {
                 Text("Saldo")
             }
         )
 
-
         // =========================
         // PERFIL
         // =========================
-
         NavigationBarItem(
-
             selected = false,
-
             onClick = {
-
                 onPerfil()
             },
-
             icon = {
-
                 Icon(
                     imageVector =
                         Icons.Default.Person,
-
                     contentDescription =
                         "Perfil"
                 )
             },
-
             label = {
                 Text("Perfil")
             }

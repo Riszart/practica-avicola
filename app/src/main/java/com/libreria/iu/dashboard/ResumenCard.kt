@@ -27,46 +27,30 @@ import androidx.compose.ui.unit.sp
 
 @Composable
 fun ResumenCard(
-
     titulo: String,
-
     valor: String,
-
     icono: ImageVector,
-
     modifier: Modifier = Modifier
-
 ) {
-
     Card(
-
         modifier =
             modifier.height(90.dp),
-
         shape =
             RoundedCornerShape(10.dp),
-
         colors =
             CardDefaults.cardColors(
                 containerColor = Color.White
             )
-
     ) {
-
         Row(
-
             modifier =
                 Modifier
                     .fillMaxSize()
                     .padding(10.dp),
-
             verticalAlignment =
                 Alignment.CenterVertically
-
         ) {
-
             Box(
-
                 modifier =
                     Modifier
                         .size(35.dp)
@@ -76,63 +60,44 @@ fun ResumenCard(
                         .background(
                             Color(0xFFE8F1FB)
                         ),
-
                 contentAlignment =
                     Alignment.Center
-
             ) {
-
                 Icon(
-
                     imageVector =
                         icono,
-
                     contentDescription =
                         titulo,
-
                     tint =
                         Color(0xFF1976D2),
-
                     modifier =
                         Modifier.size(20.dp)
                 )
             }
-
             Spacer(
                 modifier =
                     Modifier.width(8.dp)
             )
-
             Column {
-
                 Text(
-
                     text =
                         titulo,
-
                     fontSize =
                         10.sp,
-
                     color =
                         Color.Gray
                 )
-
                 Spacer(
                     modifier =
                         Modifier.height(3.dp)
                 )
-
                 Text(
-
                     text =
                         valor,
-
                     fontSize =
                         14.sp,
-
                     fontWeight =
                         FontWeight.Bold,
-
                     color =
                         Color(0xFF263238)
                 )

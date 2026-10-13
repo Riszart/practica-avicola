@@ -40,26 +40,18 @@ fun LoginScreen(
     var correo by remember {
         mutableStateOf("")
     }
-
     var password by remember {
         mutableStateOf("")
     }
-
     Column(
-
         modifier = Modifier
             .fillMaxSize()
             .background(Color(0xFFF5F7FA))
             .padding(25.dp),
-
         horizontalAlignment = Alignment.CenterHorizontally,
-
         verticalArrangement = Arrangement.Center
-
     ) {
-
         // LOGO
-
         androidx.compose.foundation.layout.Box(
 
             modifier = Modifier
@@ -70,19 +62,13 @@ fun LoginScreen(
                 .background(
                     Color(0xFF1976D2)
                 ),
-
             contentAlignment = Alignment.Center
 
         ) {
-
             Icon(
-
                 imageVector = Icons.Default.ShoppingCart,
-
                 contentDescription = "Logo",
-
                 tint = Color.White,
-
                 modifier = Modifier.size(45.dp)
             )
         }
@@ -92,22 +78,15 @@ fun LoginScreen(
         )
 
         Text(
-
             text = "Avícola Machelo",
-
             fontSize = 26.sp,
-
             fontWeight = FontWeight.Bold,
-
             color = Color(0xFF17365D)
         )
 
         Text(
-
             text = "Acceso de clientes",
-
             fontSize = 14.sp,
-
             color = Color.Gray
         )
 
@@ -118,19 +97,14 @@ fun LoginScreen(
         // CORREO
 
         OutlinedTextField(
-
             value = correo,
-
             onValueChange = {
                 correo = it
             },
-
             label = {
                 Text("Correo electrónico")
             },
-
             modifier = Modifier.fillMaxWidth(),
-
             singleLine = true
         )
 
@@ -139,24 +113,17 @@ fun LoginScreen(
         )
 
         // CONTRASEÑA
-
         OutlinedTextField(
-
             value = password,
-
             onValueChange = {
                 password = it
             },
-
             label = {
                 Text("Contraseña")
             },
-
             visualTransformation =
                 PasswordVisualTransformation(),
-
             modifier = Modifier.fillMaxWidth(),
-
             singleLine = true
         )
 
@@ -167,17 +134,12 @@ fun LoginScreen(
         // INGRESAR
 
         Button(
-
             onClick = onLogin,
-
             modifier = Modifier
                 .fillMaxWidth()
                 .height(52.dp),
-
             shape = RoundedCornerShape(12.dp)
-
         ) {
-
             Text(
                 text = "INGRESAR",
                 fontSize = 16.sp
@@ -193,7 +155,6 @@ fun LoginScreen(
         TextButton(
             onClick = onRegistro
         ) {
-
             Text(
                 text = "¿No tienes una cuenta? Regístrate"
             )

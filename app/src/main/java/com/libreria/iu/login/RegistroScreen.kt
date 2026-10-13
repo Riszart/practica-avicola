@@ -29,41 +29,29 @@ import androidx.compose.ui.unit.sp
 fun RegistroScreen(
     onLogin: () -> Unit
 ) {
-
     var nombre by remember {
         mutableStateOf("")
     }
-
     var correo by remember {
         mutableStateOf("")
     }
-
     var password by remember {
         mutableStateOf("")
     }
 
     Column(
-
         modifier = Modifier
             .fillMaxSize()
             .background(Color(0xFFF5F7FA))
             .padding(24.dp),
-
         horizontalAlignment = Alignment.CenterHorizontally,
-
         verticalArrangement = Arrangement.Center
-
     ) {
-
         Text(
-
             text = "Crear Cuenta",
-
             fontSize = 28.sp,
-
             fontWeight = FontWeight.Bold
         )
-
         Spacer(
             modifier = Modifier.height(25.dp)
         )
@@ -71,19 +59,14 @@ fun RegistroScreen(
         // NOMBRE
 
         OutlinedTextField(
-
             value = nombre,
-
             onValueChange = {
                 nombre = it
             },
-
             label = {
                 Text("Nombre completo")
             },
-
             modifier = Modifier.fillMaxWidth(),
-
             singleLine = true
         )
 
@@ -92,47 +75,33 @@ fun RegistroScreen(
         )
 
         // CORREO
-
         OutlinedTextField(
-
             value = correo,
-
             onValueChange = {
                 correo = it
             },
-
             label = {
                 Text("Correo")
             },
-
             modifier = Modifier.fillMaxWidth(),
-
             singleLine = true
         )
-
         Spacer(
             modifier = Modifier.height(12.dp)
         )
 
         // CONTRASEÑA
-
         OutlinedTextField(
-
             value = password,
-
             onValueChange = {
                 password = it
             },
-
             label = {
                 Text("Contraseña")
             },
-
             visualTransformation =
                 PasswordVisualTransformation(),
-
             modifier = Modifier.fillMaxWidth(),
-
             singleLine = true
         )
 
@@ -141,27 +110,20 @@ fun RegistroScreen(
         )
 
         Button(
-
             onClick = {
-
                 // Posteriormente:
                 // enviar datos al backend
 
             },
-
             modifier = Modifier
                 .fillMaxWidth()
                 .height(50.dp)
-
         ) {
-
             Text("REGISTRARSE")
         }
-
         TextButton(
             onClick = onLogin
         ) {
-
             Text(
                 "¿Ya tienes una cuenta? Inicia sesión"
             )
